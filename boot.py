@@ -67,7 +67,17 @@ class Device:
     def start(self):
         self.joystick.start_advertising()
         while True:
-            self.buttons["GREEN"][0].value()
+            # just an idea
+            buttonmap = {
+                'b1': 0,
+                'b2': 0,
+                'b3': 0,
+                'b4': 0,
+                'b5': 0,
+                'b6': 0,
+                'b7': 0
+            }
+            self.joystick.set_buttons(buttonmap)
 
 
 if __name__ == "__main__":
